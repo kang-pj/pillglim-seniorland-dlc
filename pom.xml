@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pilgrimseniorland</groupId>
+    <artifactId>pilgrim-seniorland</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+    <name>필그림시니어랜드 홈페이지</name>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Jakarta Servlet API (Tomcat 10 / Jakarta EE 9+) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Jakarta JSP API -->
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- JSTL (Jakarta) -->
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- MariaDB JDBC Driver -->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>3.3.3</version>
+        </dependency>
+        <!-- Apache Commons DBCP2 (커넥션 풀) -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+
+        <!-- BCrypt (관리자 비밀번호 해시) -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <!-- JavaMail (이메일 발송) -->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <!-- Gson (reCAPTCHA 응답 파싱) -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
+        <!-- SLF4J + Logback (로깅) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version>
+        </dependency>
+
+        <!-- JUnit 5 (테스트) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Mockito (테스트 목킹) -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>pilgrim-seniorland</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+            <!-- Tomcat Maven Plugin -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+            
+            <!-- Jetty Maven Plugin (Java 21 호환) -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>11.0.18</version>
+                <configuration>
+                    <httpConnector>
+                        <port>8080</port>
+                    </httpConnector>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                    </webApp>
+                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>org.eclipse.jetty.server.Request.maxFormContentSize</name>
+                            <value>200000</value>
+                        </systemProperty>
+                        <systemProperty>
+                            <name>file.encoding</name>
+                            <value>UTF-8</value>
+                        </systemProperty>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
