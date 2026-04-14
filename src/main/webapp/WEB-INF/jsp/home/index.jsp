@@ -128,50 +128,101 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-20 space-y-4">
         <h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tight">The Art of Living</h2>
-        <p class="text-on-surface-variant max-w-xl mx-auto">일상의 모든 순간이 특별해지는 프리미엄 어메니티를 경험하세요.</p>
+        <p class="text-on-surface-variant max-w-xl mx-auto">일상의 모든 순간이 특별해지는 프리미엄 시설을 경험하세요.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[800px]">
-        <div class="md:col-span-2 md:row-span-1 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px] reveal reveal-delay-1" alt="파인 다이닝">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- 1. 라이프스타일 - 2칸 -->
+        <div class="md:col-span-2 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/800x320/c4e7ff/00658b?text=Lifestyle+Facility"
+               alt="라이프스타일 입소 시설">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
-            <span class="material-symbols-outlined text-4xl mb-2 block">restaurant</span>
-            <h3 class="text-2xl font-bold font-headline">파인 다이닝</h3>
-            <p class="text-sm opacity-80">영양사가 설계한 유기농 고메 식단</p>
+            <span class="material-symbols-outlined text-4xl mb-2 block">home_work</span>
+            <h3 class="text-2xl font-bold font-headline">스타일 맞춤형 입소시설 제공</h3>
+            <p class="text-sm opacity-80 mt-1 max-w-sm">개인의 생활 방식과 취향에 맞춘 맞춤형 입소 환경을 제공합니다.</p>
           </div>
         </div>
-        <div class="md:col-span-1 md:row-span-2 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px]">
-          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
-               src="https://placehold.co/400x800/77cefe/00658b?text=Wellness"
-               alt="웰니스 허브">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+        <!-- 2. 의료 시설 - 1칸 -->
+        <div class="group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/400x320/afc8d5/00658b?text=Medical+Center"
+               alt="의료 시설">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
-            <span class="material-symbols-outlined text-4xl mb-2 block">fitness_center</span>
-            <h3 class="text-2xl font-bold font-headline">웰니스 허브</h3>
-            <p class="text-sm opacity-80">맞춤형 피트니스 &amp; 요가 클래스</p>
+            <span class="material-symbols-outlined text-4xl mb-2 block">local_hospital</span>
+            <h3 class="text-2xl font-bold font-headline">건강관리서비스 의료시설 운영</h3>
+            <p class="text-sm opacity-80 mt-1">전문 의료진 상주 및 건강 관리 서비스 제공</p>
           </div>
         </div>
-        <div class="md:col-span-1 md:row-span-1 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px]">
-          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
-               src="https://placehold.co/400x400/cde6f4/00658b?text=Spa"
-               alt="프라이빗 스파">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+        <!-- 3. 문화여가 - 1칸 -->
+        <div class="group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/400x320/77cefe/00658b?text=Culture+Leisure"
+               alt="문화여가">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
-            <span class="material-symbols-outlined text-4xl mb-2 block">spa</span>
-            <h3 class="text-2xl font-bold font-headline">프라이빗 스파</h3>
-            <p class="text-sm opacity-80">심신을 치유하는 테라피</p>
+            <span class="material-symbols-outlined text-4xl mb-2 block">theater_comedy</span>
+            <h3 class="text-2xl font-bold font-headline">문화여가서비스 복합화</h3>
+            <p class="text-sm opacity-80 mt-1">다양한 문화·여가 프로그램이 한 공간에</p>
           </div>
         </div>
-        <div class="md:col-span-2 md:row-span-1 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px]">
-          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
-               src="https://placehold.co/800x400/d5e3fd/00658b?text=Social+Lounge"
-               alt="소셜 라운지">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+        <!-- 4. 개인 공간 - 1칸 -->
+        <div class="group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/400x320/d5e3fd/00658b?text=Private+Space"
+               alt="개인 공간">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
-            <span class="material-symbols-outlined text-4xl mb-2 block">auto_stories</span>
-            <h3 class="text-2xl font-bold font-headline">소셜 라운지</h3>
-            <p class="text-sm opacity-80">문화와 예술이 흐르는 커뮤니티 공간</p>
+            <span class="material-symbols-outlined text-4xl mb-2 block">manage_accounts</span>
+            <h3 class="text-2xl font-bold font-headline">개인 공간 철저 보장</h3>
+            <p class="text-sm opacity-80 mt-1">유닛별 전담 관리로 프라이버시 완벽 보호</p>
           </div>
         </div>
+
+        <!-- 5. 경제적 공동생활 - 1칸 -->
+        <div class="group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/400x320/cde6f4/00658b?text=Community+Living"
+               alt="경제적 공동생활">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <span class="material-symbols-outlined text-4xl mb-2 block">groups</span>
+            <h3 class="text-2xl font-bold font-headline">경제적 공동생활 영위</h3>
+            <p class="text-sm opacity-80 mt-1">합리적인 비용으로 누리는 품격 있는 공동생활</p>
+          </div>
+        </div>
+
+        <!-- 6. 주변 관광지 - 1칸 -->
+        <div class="group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/400x320/b9c7e0/00658b?text=Tourism+Facility"
+               alt="주변 관광지">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <span class="material-symbols-outlined text-4xl mb-2 block">travel_explore</span>
+            <h3 class="text-2xl font-bold font-headline">주변 관광지 활용 시설</h3>
+            <p class="text-sm opacity-80 mt-1">인근 관광지와 연계된 여가 활동 공간 운영</p>
+          </div>
+        </div>
+
+        <!-- 7. 지역주민 공동체 - 2칸 -->
+        <div class="md:col-span-2 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[320px]">
+          <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70"
+               src="https://placehold.co/800x320/c4e7ff/00658b?text=Community+Formation"
+               alt="지역주민 공동체">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <span class="material-symbols-outlined text-4xl mb-2 block">diversity_3</span>
+            <h3 class="text-2xl font-bold font-headline">지역주민과 공동체 형성</h3>
+            <p class="text-sm opacity-80 mt-1 max-w-sm">지역사회와 함께 어우러지는 열린 커뮤니티 공간</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
