@@ -86,7 +86,7 @@
   </script>
 
   <!-- ② About -->
-  <section class="py-32 px-8 max-w-7xl mx-auto reveal" id="about">
+  <section class="py-32 pb-12 px-8 max-w-7xl mx-auto reveal" id="about">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-24">
       <!-- 좌측 텍스트 -->
       <div class="space-y-8 lg:border-r lg:border-outline-variant/30 lg:pr-24 lg:sticky lg:top-32 self-center">
@@ -121,25 +121,6 @@
         </a>
       </div>
     </div>
-    <div class="relative rounded-xl overflow-hidden h-[500px]">
-      <img class="w-full h-full object-cover"
-           src="https://placehold.co/1400x500/c4e7ff/00658b?text=시설+전경"
-           alt="필그림시니어랜드 시설">
-      <div class="absolute bottom-8 left-8 right-8 grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/40 backdrop-blur-md p-8 rounded-lg">
-        <div class="text-on-background">
-          <span class="text-3xl font-bold font-headline">52,000㎡</span>
-          <p class="text-xs font-semibold uppercase tracking-widest text-primary mt-1">총 부지 면적</p>
-        </div>
-        <div class="text-on-background">
-          <span class="text-3xl font-bold font-headline">320세대</span>
-          <p class="text-xs font-semibold uppercase tracking-widest text-primary mt-1">프리미엄 주거</p>
-        </div>
-        <div class="text-on-background">
-          <span class="text-3xl font-bold font-headline">24/7</span>
-          <p class="text-xs font-semibold uppercase tracking-widest text-primary mt-1">컨시어지 서비스</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ③ Amenities Bento Grid -->
@@ -150,8 +131,7 @@
         <p class="text-on-surface-variant max-w-xl mx-auto">일상의 모든 순간이 특별해지는 프리미엄 어메니티를 경험하세요.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[800px]">
-        <div class="md:col-span-2 md:row-span-1 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px] reveal reveal-delay-1">
-               alt="파인 다이닝">
+        <div class="md:col-span-2 md:row-span-1 group relative rounded-xl overflow-hidden bg-surface-container-lowest ambient-shadow hover:-translate-y-2 transition-all duration-300 min-h-[300px] reveal reveal-delay-1" alt="파인 다이닝">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <span class="material-symbols-outlined text-4xl mb-2 block">restaurant</span>
