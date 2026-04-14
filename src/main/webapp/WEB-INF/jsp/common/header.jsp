@@ -62,12 +62,63 @@
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/30 px-6 py-5 space-y-3">
-    <a href="${pageContext.request.contextPath}/intro/greeting" class="block text-sm text-on-surface py-2">소개</a>
-    <a href="${pageContext.request.contextPath}/business/overview" class="block text-sm text-on-surface py-2">사업정보</a>
-    <a href="${pageContext.request.contextPath}/signature/premium" class="block text-sm text-on-surface py-2">시그니처</a>
-    <a href="${pageContext.request.contextPath}/residence/typemap" class="block text-sm text-on-surface py-2">주거공간</a>
-    <a href="${pageContext.request.contextPath}/support/notice" class="block text-sm text-on-surface py-2">고객센터</a>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/30 px-6 py-5 space-y-1">
+    <!-- 소개 -->
+    <div>
+      <button onclick="toggleMobileSub('sub-intro')" class="w-full flex justify-between items-center text-sm text-on-surface py-3 font-semibold">
+        소개 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-intro">expand_more</span>
+      </button>
+      <div id="sub-intro" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
+        <a href="${pageContext.request.contextPath}/intro/greeting" class="block text-sm text-on-surface-variant py-2">인사말</a>
+        <a href="${pageContext.request.contextPath}/intro/brand" class="block text-sm text-on-surface-variant py-2">브랜드 소개</a>
+        <a href="${pageContext.request.contextPath}/intro/vision" class="block text-sm text-on-surface-variant py-2">비전</a>
+      </div>
+    </div>
+    <!-- 사업정보 -->
+    <div>
+      <button onclick="toggleMobileSub('sub-business')" class="w-full flex justify-between items-center text-sm text-on-surface py-3 font-semibold">
+        사업정보 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-business">expand_more</span>
+      </button>
+      <div id="sub-business" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
+        <a href="${pageContext.request.contextPath}/business/overview" class="block text-sm text-on-surface-variant py-2">사업개요</a>
+        <a href="${pageContext.request.contextPath}/business/site" class="block text-sm text-on-surface-variant py-2">사업지 소개</a>
+      </div>
+    </div>
+    <!-- 시그니처 -->
+    <div>
+      <button onclick="toggleMobileSub('sub-signature')" class="w-full flex justify-between items-center text-sm text-on-surface py-3 font-semibold">
+        시그니처 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-signature">expand_more</span>
+      </button>
+      <div id="sub-signature" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
+        <a href="${pageContext.request.contextPath}/signature/premium" class="block text-sm text-on-surface-variant py-2">프리미엄</a>
+        <a href="${pageContext.request.contextPath}/signature/community" class="block text-sm text-on-surface-variant py-2">커뮤니티</a>
+        <a href="${pageContext.request.contextPath}/signature/plan" class="block text-sm text-on-surface-variant py-2">시설 계획</a>
+        <a href="${pageContext.request.contextPath}/signature/floor" class="block text-sm text-on-surface-variant py-2">층별 안내</a>
+        <a href="${pageContext.request.contextPath}/signature/nearby" class="block text-sm text-on-surface-variant py-2">주변 시설</a>
+        <a href="${pageContext.request.contextPath}/signature/amenity" class="block text-sm text-on-surface-variant py-2">편의시설</a>
+      </div>
+    </div>
+    <!-- 주거공간 -->
+    <div>
+      <button onclick="toggleMobileSub('sub-residence')" class="w-full flex justify-between items-center text-sm text-on-surface py-3 font-semibold">
+        주거공간 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-residence">expand_more</span>
+      </button>
+      <div id="sub-residence" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
+        <a href="${pageContext.request.contextPath}/residence/typemap" class="block text-sm text-on-surface-variant py-2">타입별 위치도</a>
+        <a href="${pageContext.request.contextPath}/residence/floorplan" class="block text-sm text-on-surface-variant py-2">평면소개</a>
+      </div>
+    </div>
+    <!-- 고객센터 -->
+    <div>
+      <button onclick="toggleMobileSub('sub-support')" class="w-full flex justify-between items-center text-sm text-on-surface py-3 font-semibold">
+        고객센터 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-support">expand_more</span>
+      </button>
+      <div id="sub-support" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
+        <a href="${pageContext.request.contextPath}/support/notice" class="block text-sm text-on-surface-variant py-2">공지사항</a>
+        <a href="${pageContext.request.contextPath}/support/contact" class="block text-sm text-on-surface-variant py-2">온라인 문의</a>
+        <a href="${pageContext.request.contextPath}/support/qna" class="block text-sm text-on-surface-variant py-2">Q&amp;A</a>
+      </div>
+    </div>
     <a href="${pageContext.request.contextPath}/support/contact"
        class="block bg-primary text-on-primary text-sm text-center px-6 py-2.5 rounded-full font-semibold mt-3">입주 문의</a>
   </div>
@@ -76,4 +127,17 @@
   document.getElementById('mobile-menu-btn').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
+  function toggleMobileSub(id) {
+    const sub = document.getElementById(id);
+    const arrow = document.getElementById('arrow-' + id);
+    if (sub.style.maxHeight && sub.style.maxHeight !== '0px') {
+      sub.style.maxHeight = '0px';
+      sub.style.opacity = '0';
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      sub.style.maxHeight = sub.scrollHeight + 'px';
+      sub.style.opacity = '1';
+      arrow.style.transform = 'rotate(180deg)';
+    }
+  }
 </script>
