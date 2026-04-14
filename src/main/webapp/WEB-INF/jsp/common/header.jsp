@@ -4,7 +4,6 @@
   <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
     <a href="${pageContext.request.contextPath}/" class="flex items-center gap-3">
       <img src="${pageContext.request.contextPath}/resources/images/logo.jpg" alt="필그림시니어랜드 로고" class="h-10 w-auto">
-      <span class="text-xl font-bold text-[#00658b] tracking-tighter font-headline hidden md:block">필그림시니어랜드</span>
     </a>
 
     <ul class="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">

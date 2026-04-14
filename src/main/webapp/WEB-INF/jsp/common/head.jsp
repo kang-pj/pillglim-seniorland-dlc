@@ -80,7 +80,7 @@
 <style>
   body { font-family: 'Noto Sans KR', 'Inter', sans-serif; }
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-  .glass-header { background-color: rgba(255,255,255,0.7); backdrop-filter: blur(24px); }
+  .glass-header { background-color: rgba(255,255,255,1); backdrop-filter: blur(24px); }
   .hero-gradient { background: linear-gradient(135deg, #00658b 0%, #77cefe 100%); }
   .ambient-shadow { box-shadow: 0 20px 40px rgba(25,28,30,0.06); }
 
