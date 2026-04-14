@@ -437,7 +437,7 @@
     <div class="max-w-3xl mx-auto text-center space-y-12">
       <div class="space-y-4">
         <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tight">Begin Your Journey</h2>
-        <p class="text-on-surface-variant">필그림시니어랜드의 특별한 일상을 직접 확인하세요. 전문 상담사가 24시간 이내에 연락드립니다.</p>
+        <p class="text-on-surface-variant">문의를 남겨놔 주시면 연락드리겠습니다.</p>
       </div>
       <form action="${pageContext.request.contextPath}/support/contact" method="post"
             class="space-y-8 bg-surface p-12 rounded-xl ambient-shadow text-left">
@@ -449,24 +449,25 @@
           </div>
           <div class="space-y-2">
             <label class="text-sm font-bold font-label uppercase tracking-widest text-primary">연락처</label>
-            <input type="tel" name="phone" placeholder="010-0000-0000"
+            <input type="tel" name="phone" id="phone-input" placeholder="- 없이 입력하세요" maxlength="11"
                    class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary transition-all py-3">
           </div>
         </div>
         <div class="space-y-2">
-          <label class="text-sm font-bold font-label uppercase tracking-widest text-primary">관심 분야</label>
+          <label class="text-sm font-bold font-label uppercase tracking-widest text-primary">이메일</label>
+          <input type="email" name="email" placeholder="example@email.com"
+                 class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary transition-all py-3">
+        </div>
+        <div class="space-y-2">
+          <label class="text-sm font-bold font-label uppercase tracking-widest text-primary">문의 유형</label>
           <div class="flex flex-wrap gap-3 pt-2">
             <label class="cursor-pointer">
-              <input class="hidden peer" name="interest" type="radio" value="입주 상담">
-              <span class="px-6 py-2 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/30 transition-all text-sm">입주 상담</span>
+              <input class="hidden peer" name="interest" type="radio" value="입주 문의">
+              <span class="px-6 py-2 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/30 transition-all text-sm">입주 문의</span>
             </label>
             <label class="cursor-pointer">
-              <input class="hidden peer" name="interest" type="radio" value="현장 견학">
-              <span class="px-6 py-2 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/30 transition-all text-sm">현장 견학</span>
-            </label>
-            <label class="cursor-pointer">
-              <input class="hidden peer" name="interest" type="radio" value="카탈로그 요청">
-              <span class="px-6 py-2 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/30 transition-all text-sm">카탈로그 요청</span>
+              <input class="hidden peer" name="interest" type="radio" value="일반 문의">
+              <span class="px-6 py-2 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/30 transition-all text-sm">일반 문의</span>
             </label>
           </div>
         </div>
@@ -483,34 +484,8 @@
     </div>
   </section>
 
-  <!-- ⑥ 공지사항 -->
-  <section class="py-20 px-8 max-w-7xl mx-auto reveal">
-    <div class="flex justify-between items-end mb-10">
-      <h2 class="font-headline text-2xl font-bold text-on-background">공지사항</h2>
-      <a href="${pageContext.request.contextPath}/support/notice"
-         class="text-sm text-primary font-semibold hover:underline">더보기</a>
-    </div>
-    <ul>
-      <c:choose>
-        <c:when test="${empty recentNotices}">
-          <li class="py-5 text-sm text-on-surface-variant border-t border-outline-variant/30">등록된 공지사항이 없습니다.</li>
-        </c:when>
-        <c:otherwise>
-          <c:forEach var="notice" items="${recentNotices}">
-            <li class="border-t border-outline-variant/30">
-              <a href="${pageContext.request.contextPath}/support/notice/detail?id=${notice.id}"
-                 class="flex justify-between items-center py-5 group hover:bg-surface-container-low px-2 -mx-2 transition-colors rounded-lg">
-                <span class="text-sm text-on-surface group-hover:text-primary transition-colors">${notice.title}</span>
-                <span class="text-xs text-outline whitespace-nowrap ml-8">
-                  <fmt:formatDate value="${notice.createdAt}" pattern="yyyy.MM.dd"/>
-                </span>
-              </a>
-            </li>
-          </c:forEach>
-        </c:otherwise>
-      </c:choose>
-    </ul>
-  </section>
+  <!-- ⑥ 공지사항 제거 -->
+
 
 </main>
 
@@ -521,6 +496,25 @@
 </a>
 
 <%@ include file="/WEB-INF/jsp/common/footer.jsp" %>
+
+<script>
+  // 전화번호 자동 포맷
+  const phoneInput = document.getElementById('phone-input');
+  phoneInput.addEventListener('keypress', function(e) {
+    if (!/[0-9]/.test(e.key)) e.preventDefault();
+  });
+  phoneInput.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '').slice(0, 11);
+  });
+  phoneInput.addEventListener('blur', function() {
+    let val = this.value.replace(/\D/g, '');
+    if (val.length === 11) {
+      this.value = val.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+    } else if (val.length === 10) {
+      this.value = val.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+    }
+  });
+</script>
 
 <script>
   const observer = new IntersectionObserver((entries) => {
