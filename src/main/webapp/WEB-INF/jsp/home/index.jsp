@@ -229,44 +229,163 @@
 
   <!-- ④ Housing -->
   <section class="py-32 px-8 max-w-7xl mx-auto reveal" id="housing">
-    <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
       <div class="space-y-4">
         <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tight">Refined Living Spaces</h2>
         <p class="text-on-surface-variant">오직 당신을 위한 맞춤형 공간 설계</p>
       </div>
-      <div class="flex gap-4 font-headline text-sm font-semibold overflow-x-auto pb-2">
-        <button class="px-6 py-2 rounded-full border-2 border-primary bg-primary text-on-primary whitespace-nowrap">그랜드 스위트</button>
-        <button class="px-6 py-2 rounded-full border-2 border-outline-variant hover:border-primary transition-colors whitespace-nowrap">가든 테라스</button>
-        <button class="px-6 py-2 rounded-full border-2 border-outline-variant hover:border-primary transition-colors whitespace-nowrap">스탠다드</button>
+      <!-- 타입 탭 -->
+      <div class="flex gap-3 font-headline text-sm font-semibold overflow-x-auto pb-2" id="housing-tabs">
+        <button onclick="showType('A')" class="housing-tab px-6 py-2 rounded-full border-2 border-primary bg-primary text-on-primary whitespace-nowrap" data-type="A">A타입 (1층)</button>
+        <button onclick="showType('B')" class="housing-tab px-6 py-2 rounded-full border-2 border-outline-variant hover:border-primary transition-colors whitespace-nowrap" data-type="B">B타입 (2층)</button>
+        <button onclick="showType('C')" class="housing-tab px-6 py-2 rounded-full border-2 border-outline-variant hover:border-primary transition-colors whitespace-nowrap" data-type="C">C타입 (3층)</button>
+        <button onclick="showType('D')" class="housing-tab px-6 py-2 rounded-full border-2 border-outline-variant hover:border-primary transition-colors whitespace-nowrap" data-type="D">D타입 (4층)</button>
       </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 bg-white rounded-xl p-12 ambient-shadow border border-surface-container">
+
+    <!-- A타입 -->
+    <div id="type-A" class="housing-panel grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 bg-white rounded-xl p-8 ambient-shadow border border-surface-container">
         <img class="w-full h-auto rounded-lg"
-             src="https://placehold.co/800x500/f2f4f6/00658b?text=평면도"
-             alt="평면도">
+             src="${pageContext.request.contextPath}/resources/images/1F-A.jpg"
+             alt="A타입 평면도">
       </div>
-      <div class="lg:col-span-5 space-y-12">
-        <div class="space-y-4">
-          <h3 class="font-headline text-3xl font-bold">그랜드 스위트</h3>
-          <p class="text-on-surface-variant leading-relaxed">파노라마 뷰를 품은 거실과 최고급 천연 소재로 마감된 인테리어. 최첨단 IoT 케어 시스템이 내장된 마스터 룸이 제공됩니다.</p>
+      <div class="lg:col-span-5 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">1F · A Type</span>
+          <h3 class="font-headline text-3xl font-bold">A타입</h3>
+          <p class="text-on-surface-variant leading-relaxed">1층에 위치한 A타입은 넓은 전용면적으로 여유로운 생활 공간을 제공합니다.</p>
         </div>
-        <div class="space-y-6">
-          <div class="flex justify-between border-b border-outline-variant pb-4">
-            <span class="text-on-surface-variant">전용 면적</span>
-            <span class="font-bold">152㎡</span>
+        <div class="space-y-4">
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">세대수</span>
+            <span class="font-bold text-sm">121 세대</span>
           </div>
-          <div class="flex justify-between border-b border-outline-variant pb-4">
-            <span class="text-on-surface-variant">침실 / 욕실</span>
-            <span class="font-bold">3 / 2</span>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">전용면적</span>
+            <span class="font-bold text-sm">47.71㎡ (14.43평)</span>
           </div>
-          <div class="flex justify-between border-b border-outline-variant pb-4">
-            <span class="text-on-surface-variant">스마트 홈</span>
-            <span class="font-bold">AI 케어 시스템</span>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">공용면적</span>
+            <span class="font-bold text-sm">59.27㎡ (17.93평)</span>
           </div>
-          <div class="flex justify-between border-b border-outline-variant pb-4">
-            <span class="text-on-surface-variant">뷰</span>
-            <span class="font-bold">파노라마 뷰</span>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">임대면적</span>
+            <span class="font-bold text-sm">106.98㎡ (32.36평)</span>
+          </div>
+        </div>
+        <a href="${pageContext.request.contextPath}/residence/floorplan"
+           class="block w-full py-4 rounded-full border-2 border-primary text-primary font-headline font-bold text-center hover:bg-primary hover:text-on-primary transition-all">
+          자세히 보기
+        </a>
+      </div>
+    </div>
+
+    <!-- B타입 -->
+    <div id="type-B" class="housing-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 bg-white rounded-xl p-8 ambient-shadow border border-surface-container">
+        <img class="w-full h-auto rounded-lg"
+             src="${pageContext.request.contextPath}/resources/images/2F-B.jpg"
+             alt="B타입 평면도">
+      </div>
+      <div class="lg:col-span-5 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">2F · B Type</span>
+          <h3 class="font-headline text-3xl font-bold">B타입</h3>
+          <p class="text-on-surface-variant leading-relaxed">2층에 위치한 B타입은 합리적인 면적으로 효율적인 생활 공간을 제공합니다.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">세대수</span>
+            <span class="font-bold text-sm">124 세대</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">전용면적</span>
+            <span class="font-bold text-sm">38.71㎡ (11.71평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">공용면적</span>
+            <span class="font-bold text-sm">48.09㎡ (14.55평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">임대면적</span>
+            <span class="font-bold text-sm">86.80㎡ (26.26평)</span>
+          </div>
+        </div>
+        <a href="${pageContext.request.contextPath}/residence/floorplan"
+           class="block w-full py-4 rounded-full border-2 border-primary text-primary font-headline font-bold text-center hover:bg-primary hover:text-on-primary transition-all">
+          자세히 보기
+        </a>
+      </div>
+    </div>
+
+    <!-- C타입 -->
+    <div id="type-C" class="housing-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 bg-white rounded-xl p-8 ambient-shadow border border-surface-container">
+        <img class="w-full h-auto rounded-lg"
+             src="${pageContext.request.contextPath}/resources/images/3F-C.jpg"
+             alt="C타입 평면도">
+      </div>
+      <div class="lg:col-span-5 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">3F · C Type</span>
+          <h3 class="font-headline text-3xl font-bold">C타입</h3>
+          <p class="text-on-surface-variant leading-relaxed">3층에 위치한 C타입은 쾌적한 전망과 함께 아늑한 생활 공간을 제공합니다.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">세대수</span>
+            <span class="font-bold text-sm">126 세대</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">전용면적</span>
+            <span class="font-bold text-sm">35.71㎡ (10.80평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">공용면적</span>
+            <span class="font-bold text-sm">44.36㎡ (13.42평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">임대면적</span>
+            <span class="font-bold text-sm">80.07㎡ (24.22평)</span>
+          </div>
+        </div>
+        <a href="${pageContext.request.contextPath}/residence/floorplan"
+           class="block w-full py-4 rounded-full border-2 border-primary text-primary font-headline font-bold text-center hover:bg-primary hover:text-on-primary transition-all">
+          자세히 보기
+        </a>
+      </div>
+    </div>
+
+    <!-- D타입 -->
+    <div id="type-D" class="housing-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 bg-white rounded-xl p-8 ambient-shadow border border-surface-container">
+        <img class="w-full h-auto rounded-lg"
+             src="${pageContext.request.contextPath}/resources/images/4F-D.jpg"
+             alt="D타입 평면도">
+      </div>
+      <div class="lg:col-span-5 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">4F · D Type</span>
+          <h3 class="font-headline text-3xl font-bold">D타입</h3>
+          <p class="text-on-surface-variant leading-relaxed">4층에 위치한 D타입은 탁 트인 전망과 함께 아늑한 생활 공간을 제공합니다.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">세대수</span>
+            <span class="font-bold text-sm">126 세대</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">전용면적</span>
+            <span class="font-bold text-sm">32.71㎡ (9.90평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">공용면적</span>
+            <span class="font-bold text-sm">40.64㎡ (12.29평)</span>
+          </div>
+          <div class="flex justify-between border-b border-outline-variant pb-3">
+            <span class="text-on-surface-variant text-sm">임대면적</span>
+            <span class="font-bold text-sm">73.35㎡ (22.19평)</span>
           </div>
         </div>
         <a href="${pageContext.request.contextPath}/residence/floorplan"
@@ -276,6 +395,42 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function showType(type) {
+      const panels = document.querySelectorAll('.housing-panel');
+      const current = Array.from(panels).find(p => !p.classList.contains('hidden'));
+
+      document.querySelectorAll('.housing-tab').forEach(t => {
+        t.classList.remove('border-primary', 'bg-primary', 'text-on-primary');
+        t.classList.add('border-outline-variant', 'text-on-surface');
+      });
+      const activeTab = document.querySelector('[data-type="' + type + '"]');
+      activeTab.classList.add('border-primary', 'bg-primary', 'text-on-primary');
+      activeTab.classList.remove('border-outline-variant', 'text-on-surface');
+
+      if (current) {
+        current.style.transition = 'opacity 0.25s ease';
+        current.style.opacity = '0';
+        setTimeout(() => {
+          current.classList.add('hidden');
+          current.style.opacity = '';
+          current.style.transition = '';
+
+          const next = document.getElementById('type-' + type);
+          next.style.opacity = '0';
+          next.style.transition = 'none';
+          next.classList.remove('hidden');
+          setTimeout(() => {
+            next.style.transition = 'opacity 0.35s ease';
+            next.style.opacity = '1';
+          }, 20);
+        }, 250);
+      } else {
+        document.getElementById('type-' + type).classList.remove('hidden');
+      }
+    }
+  </script>
 
   <!-- ⑤ Contact Form -->
   <section class="py-32 bg-primary-container/20 px-8 reveal" id="contact">
