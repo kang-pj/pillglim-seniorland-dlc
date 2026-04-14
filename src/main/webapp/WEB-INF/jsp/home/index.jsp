@@ -87,26 +87,38 @@
 
   <!-- ② About -->
   <section class="py-32 px-8 max-w-7xl mx-auto reveal" id="about">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end mb-24">
-      <div class="space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-24">
+      <!-- 좌측 텍스트 -->
+      <div class="space-y-8 lg:border-r lg:border-outline-variant/30 lg:pr-24 lg:sticky lg:top-32 self-center">
         <h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tight text-on-background">
-          A Vision of<br>Eternal Serenity
+          Our Business
         </h2>
         <p class="text-on-surface-variant text-lg leading-relaxed max-w-lg">
-          필그림시니어랜드는 단순한 주거 공간을 넘어, 삶의 깊이를 더하는 예술적 공간을 추구합니다. 최고의 의료 시설과 전문 케어 시스템이 당신의 일상을 수호합니다.
+          pillgrim은 순례자입니다.  <br>긴 여정 끝에 만나는 편안한 안식처이자 다채로운 즐거움이 있는 곳, 품격 있는 인생의 새로운 시작을 함께합니다.
         </p>
       </div>
+      <!-- 우측 카드 4개 -->
       <div class="grid grid-cols-2 gap-4">
-        <div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">location_on</span>
-          <h3 class="font-headline text-xl font-bold mb-2">입지</h3>
-          <p class="text-sm text-on-surface-variant">대전 도심 속 자연과 편의시설이 어우러진 최적의 입지</p>
-        </div>
-        <div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">shield_with_heart</span>
-          <h3 class="font-headline text-xl font-bold mb-2">안전 케어</h3>
-          <p class="text-sm text-on-surface-variant">24시간 전문 의료진 상주 및 정밀 케어 시스템</p>
-        </div>
+        <a href="#" class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container block hover:bg-primary-container/30 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">theater_comedy</span>
+          <h3 class="font-headline text-xl font-bold mb-2">문화·요가</h3>
+          <p class="text-sm text-on-surface-variant">공연, 전시, 요가 클래스 등 몸과 마음을 가꾸는 문화 생활</p>
+        </a>
+        <a href="#" class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container block hover:bg-primary-container/30 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">groups</span>
+          <h3 class="font-headline text-xl font-bold mb-2">취미·동호회</h3>
+          <p class="text-sm text-on-surface-variant">원예, 독서, 사진 등 다양한 취미 모임으로 활기찬 커뮤니티</p>
+        </a>
+        <a href="#" class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container block hover:bg-primary-container/30 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">favorite</span>
+          <h3 class="font-headline text-xl font-bold mb-2">건강생활</h3>
+          <p class="text-sm text-on-surface-variant">전문 의료진과 함께하는 맞춤형 건강 관리 및 재활 프로그램</p>
+        </a>
+        <a href="#" class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary-container block hover:bg-primary-container/30 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">self_improvement</span>
+          <h3 class="font-headline text-xl font-bold mb-2">영성생활</h3>
+          <p class="text-sm text-on-surface-variant">명상, 예배, 기도 모임 등 내면의 평화를 찾는 영적 공동체</p>
+        </a>
       </div>
     </div>
     <div class="relative rounded-xl overflow-hidden h-[500px]">
