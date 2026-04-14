@@ -13,40 +13,77 @@
 
 <main>
 
-  <!-- ① Hero -->
-  <header class="relative min-h-[921px] flex items-center justify-center overflow-hidden px-8">
+  <!-- ① Hero 배너 슬라이더 -->
+  <header class="relative min-h-[921px] flex items-end overflow-hidden">
+    <!-- 슬라이드 이미지 -->
     <div class="absolute inset-0 z-0">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-20 pointer-events-none">
-        <div class="w-full h-full hero-gradient blur-[120px] rounded-full animate-pulse"></div>
+      <div class="banner-slide absolute inset-0 transition-opacity duration-1000 opacity-100">
+        <img class="w-full h-full object-cover"
+             src="${pageContext.request.contextPath}/resources/images/main_banner_01.png"
+             alt="필그림시니어랜드 배너 1">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70"></div>
       </div>
-      <img class="w-full h-full object-cover opacity-10"
-           src="https://placehold.co/1920x1080/00658b/ffffff?text=Hero"
-           alt="필그림시니어랜드 전경">
+      <div class="banner-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+        <img class="w-full h-full object-cover"
+             src="${pageContext.request.contextPath}/resources/images/main_banner_02.png"
+             alt="필그림시니어랜드 배너 2">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70"></div>
+      </div>
     </div>
-    <div class="relative z-10 max-w-5xl text-center space-y-12">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tertiary-container text-on-tertiary-container font-label text-sm font-semibold tracking-wide uppercase">
-        <span class="material-symbols-outlined text-sm">verified</span>
-        프리미엄 시니어 레지던스
-      </div>
-      <h1 class="font-headline font-bold text-4xl md:text-7xl lg:text-8xl text-on-background leading-[1.1] tracking-tight">
-        삶의 품격을 높이는 시작,<br>
-        <span class="text-primary italic">완벽한 선택</span>
-      </h1>
-      <p class="max-w-2xl mx-auto text-base md:text-xl text-on-surface-variant leading-relaxed">
-        프라이빗한 휴식과 품격 있는 커뮤니티가 공존하는 필그림시니어랜드. 당신이 꿈꾸던 진정한 여유의 완성을 제안합니다.
+
+    <!-- 텍스트 콘텐츠 -->
+    <div class="relative z-10 w-full px-12 pb-24 space-y-4">
+      <p class="font-headline font-bold whitespace-nowrap text-[clamp(1.5rem,5vw,4.5rem)] tracking-[0.15em] uppercase text-white drop-shadow-lg">
+        PILLGRIM SENIOR LAND
       </p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+      <h1 class="font-headline font-bold text-lg md:text-2xl lg:text-3xl text-white/90 leading-tight tracking-tight drop-shadow">
+        삶의 품격을 높이는 시작,<br>
+        성공한 당신의 완벽한 선택
+      </h1>
+      <div class="flex flex-col sm:flex-row gap-4 pt-2">
         <a href="${pageContext.request.contextPath}/support/contact"
            class="px-10 py-4 rounded-full hero-gradient text-on-primary font-headline font-bold text-lg hover:scale-105 transition-transform duration-300 ambient-shadow">
           입주 문의하기
         </a>
         <a href="#about"
-           class="px-10 py-4 rounded-full bg-surface-container-highest text-primary font-headline font-bold text-lg hover:scale-105 transition-transform duration-300">
+           class="px-10 py-4 rounded-full bg-white/20 backdrop-blur-sm text-white font-headline font-bold text-lg hover:scale-105 hover:bg-white/30 transition-all duration-300">
           둘러보기
         </a>
       </div>
     </div>
+
+    <!-- 슬라이드 인디케이터 -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+      <button class="banner-dot w-8 h-1.5 rounded-full bg-white transition-all duration-300" data-index="0"></button>
+      <button class="banner-dot w-3 h-1.5 rounded-full bg-white/40 transition-all duration-300" data-index="1"></button>
+    </div>
   </header>
+
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.banner-slide');
+      const dots = document.querySelectorAll('.banner-dot');
+      let current = 0;
+
+      function goTo(index) {
+        slides[current].style.opacity = '0';
+        dots[current].classList.remove('w-8', 'bg-white');
+        dots[current].classList.add('w-3', 'bg-white/40');
+
+        current = index;
+
+        slides[current].style.opacity = '1';
+        dots[current].classList.remove('w-3', 'bg-white/40');
+        dots[current].classList.add('w-8', 'bg-white');
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
+      });
+
+      setInterval(() => goTo((current + 1) % slides.length), 3000);
+    })();
+  </script>
 
   <!-- ② About -->
   <section class="py-32 px-8 max-w-7xl mx-auto reveal" id="about">
