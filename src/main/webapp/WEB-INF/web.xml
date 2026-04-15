@@ -7,9 +7,40 @@
 
     <display-name>필그림시니어랜드</display-name>
 
+    <!-- 페이지 컨트롤러 -->
+    <servlet>
+        <servlet-name>PageController</servlet-name>
+        <servlet-class>com.pilgrimseniorland.controller.PageController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageController</servlet-name>
+        <url-pattern>/intro/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageController</servlet-name>
+        <url-pattern>/business/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageController</servlet-name>
+        <url-pattern>/signature/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageController</servlet-name>
+        <url-pattern>/residence/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageController</servlet-name>
+        <url-pattern>/privacy</url-pattern>
+    </servlet-mapping>
+
+    <!-- 세션 타임아웃 -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
     <!-- Welcome 파일 -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
-        <welcome-file>test.jsp</welcome-file>
     </welcome-file-list>
+
 </web-app>

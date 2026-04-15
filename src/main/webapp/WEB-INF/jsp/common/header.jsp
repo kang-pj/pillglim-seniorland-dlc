@@ -9,7 +9,7 @@
     <ul class="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">
       <li class="relative group">
         <a href="${pageContext.request.contextPath}/intro/greeting" class="text-slate-600 hover:text-[#00658b] transition-colors">소개</a>
-        <ul class="absolute top-full left-0 mt-2 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
+        <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/intro/greeting" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">인사말</a></li>
           <li><a href="${pageContext.request.contextPath}/intro/brand" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">브랜드 소개</a></li>
           <li><a href="${pageContext.request.contextPath}/intro/vision" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">비전</a></li>
@@ -17,14 +17,14 @@
       </li>
       <li class="relative group">
         <a href="${pageContext.request.contextPath}/business/overview" class="text-slate-600 hover:text-[#00658b] transition-colors">사업정보</a>
-        <ul class="absolute top-full left-0 mt-2 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
+        <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/business/overview" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">사업개요</a></li>
           <li><a href="${pageContext.request.contextPath}/business/site" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">사업지 소개</a></li>
         </ul>
       </li>
       <li class="relative group">
         <a href="${pageContext.request.contextPath}/signature/premium" class="text-slate-600 hover:text-[#00658b] transition-colors">시그니처</a>
-        <ul class="absolute top-full left-0 mt-2 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
+        <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/signature/premium" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">프리미엄</a></li>
           <li><a href="${pageContext.request.contextPath}/signature/community" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">커뮤니티</a></li>
           <li><a href="${pageContext.request.contextPath}/signature/plan" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">시설 계획</a></li>
@@ -35,14 +35,14 @@
       </li>
       <li class="relative group">
         <a href="${pageContext.request.contextPath}/residence/typemap" class="text-slate-600 hover:text-[#00658b] transition-colors">주거공간</a>
-        <ul class="absolute top-full left-0 mt-2 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
+        <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/residence/typemap" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">타입별 위치도</a></li>
           <li><a href="${pageContext.request.contextPath}/residence/floorplan" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">평면소개</a></li>
         </ul>
       </li>
       <li class="relative group">
         <a href="${pageContext.request.contextPath}/support/notice" class="text-slate-600 hover:text-[#00658b] transition-colors">고객센터</a>
-        <ul class="absolute top-full left-0 mt-2 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
+        <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/support/notice" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">공지사항</a></li>
           <li><a href="${pageContext.request.contextPath}/support/contact" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">온라인 문의</a></li>
           <li><a href="${pageContext.request.contextPath}/support/qna" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">Q&amp;A</a></li>
