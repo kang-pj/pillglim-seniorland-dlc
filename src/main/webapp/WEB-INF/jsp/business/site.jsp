@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="ko">
 <head>
-  <title>사업지 소개 - 필그림시니어랜드</title>
   <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 <body class="bg-surface text-on-surface font-body">

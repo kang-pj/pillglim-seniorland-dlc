@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>온라인 문의 | 필그림시니어랜드</title>
     <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
     <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}"></script>
 </head>

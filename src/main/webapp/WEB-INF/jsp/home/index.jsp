@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="ko">
 <head>
-  <title>필그림시니어랜드 - 건강하고 행복한 노년</title>
   <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">

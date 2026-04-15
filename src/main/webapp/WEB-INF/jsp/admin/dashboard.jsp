@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>관리자 대시보드 | 필그림시니어랜드</title>
     <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 <body class="admin-page">

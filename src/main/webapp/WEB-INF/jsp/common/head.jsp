@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="필그림시니어랜드 - 대전에서 건강하고 행복한 노년을 준비하는 시니어복지주택">
+<title>필그림시니어랜드</title>
 <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/psl.ico">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">

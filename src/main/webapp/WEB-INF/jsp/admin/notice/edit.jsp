@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>${empty notice ? '공지사항 작성' : '공지사항 수정'} | 필그림시니어랜드</title>
     <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 <body class="admin-page">

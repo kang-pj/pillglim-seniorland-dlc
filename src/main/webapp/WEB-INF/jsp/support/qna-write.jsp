@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>질문하기 | 필그림시니어랜드</title>
     <%@ include file="/WEB-INF/jsp/common/head.jsp" %>
 </head>
 <body>

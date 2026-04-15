@@ -23,13 +23,11 @@
         </ul>
       </li>
       <li class="relative group">
-        <a href="${pageContext.request.contextPath}/signature/premium" class="text-slate-600 hover:text-[#00658b] transition-colors">시그니처</a>
+        <a href="${pageContext.request.contextPath}/signature/intro" class="text-slate-600 hover:text-[#00658b] transition-colors">시그니처</a>
         <ul class="absolute top-full left-0 w-40 bg-white border border-outline-variant/30 py-2 hidden group-hover:block shadow-sm rounded-lg">
           <li><a href="${pageContext.request.contextPath}/signature/premium" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">프리미엄</a></li>
           <li><a href="${pageContext.request.contextPath}/signature/community" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">커뮤니티</a></li>
-          <li><a href="${pageContext.request.contextPath}/signature/plan" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">시설 계획</a></li>
           <li><a href="${pageContext.request.contextPath}/signature/floor" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">층별 안내</a></li>
-          <li><a href="${pageContext.request.contextPath}/signature/nearby" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">주변 시설</a></li>
           <li><a href="${pageContext.request.contextPath}/signature/amenity" class="block px-4 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors">편의시설</a></li>
         </ul>
       </li>
@@ -90,11 +88,9 @@
         시그니처 <span class="material-symbols-outlined text-base transition-transform duration-300" id="arrow-sub-signature">expand_more</span>
       </button>
       <div id="sub-signature" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;" class="pl-4 space-y-1 pb-2">
-        <a href="${pageContext.request.contextPath}/signature/premium" class="block text-sm text-on-surface-variant py-2">프리미엄</a>
+        <a href="${pageContext.request.contextPath}/signature/intro" class="block text-sm text-on-surface-variant py-2">프리미엄</a>
         <a href="${pageContext.request.contextPath}/signature/community" class="block text-sm text-on-surface-variant py-2">커뮤니티</a>
-        <a href="${pageContext.request.contextPath}/signature/plan" class="block text-sm text-on-surface-variant py-2">시설 계획</a>
         <a href="${pageContext.request.contextPath}/signature/floor" class="block text-sm text-on-surface-variant py-2">층별 안내</a>
-        <a href="${pageContext.request.contextPath}/signature/nearby" class="block text-sm text-on-surface-variant py-2">주변 시설</a>
         <a href="${pageContext.request.contextPath}/signature/amenity" class="block text-sm text-on-surface-variant py-2">편의시설</a>
       </div>
     </div>
